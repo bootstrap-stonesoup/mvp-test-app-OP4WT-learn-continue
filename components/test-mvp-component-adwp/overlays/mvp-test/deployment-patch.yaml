@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-adwp
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/bootstrap/mvp-dev-ypmz-tenant/mvp-test-app/test-mvp-component-adwp@sha256:bc4c88ee2be317f80440995a81460ccfc8d2c5efde2b56e1e7d51856d65ea829
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
